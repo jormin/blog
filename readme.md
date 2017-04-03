@@ -77,6 +77,12 @@ $schedule->command('backup:run --only-db')->daily()->at('01:00');
 ...
 ```
 
+需要自行在系统中增加计划任务
+ 
+```shell
+* * * * * vagrant /usr/bin/php /path/to/project/artisan schedule:run >> /dev/null 2>&1
+```
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
