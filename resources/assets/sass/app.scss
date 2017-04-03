@@ -1,0 +1,91 @@
+
+// Fonts
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Font Awesome
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+@font-face {
+  /* font-properties */
+  font-family: pictos;
+  src:url('fonts/chuangyifanlishu.ttf');
+}
+
+body {
+  background-color: #326696;
+  margin: 0px;
+  font-family:Monospace;
+  font-size:13px;
+  text-align:center;
+  font-weight: bold;
+  text-align:center;
+  overflow: hidden;
+}
+#app{
+  z-index: 100;
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  -webkit-overflow-scrolling:touch
+}
+header{
+  padding: 15px;
+  a{
+    font-size: 45px;
+  }
+  a:hover{
+    color:#3097D1;
+    text-decoration: none;
+  }
+  .admin-cmd-wrap{
+    position: absolute;
+    top: 33px;
+    right: 55px;
+    a{
+      font-size: 25px;
+      margin-right:8px;
+    }
+    a:hover{
+      color:#3097D1;
+      text-decoration: none;
+    }
+  }
+}
+footer{
+  margin:35px auto;
+  z-index: 100;
+  position: relative;
+}
+
+.auth-panel{
+  margin-top: 50px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.6);
+  .panel-heading{
+    background-color: rgba(255,255,255,0.1);
+    color: #4fc1e9;
+    font-size: 15px;
+    border: 0;
+    font-size: 20px;
+  }
+  .panel-body{
+    padding-top: 30px;
+    color: #4fc1e9;
+  }
+  .btn-auth{
+    background-color: rgba(79,193,233,0.7);
+    border:0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .admin-cmd-wrap{
+    display:none;
+  }
+}
