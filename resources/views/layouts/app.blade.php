@@ -31,6 +31,7 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <script id="dsq-count-scr" src="//lerzen.disqus.com/count.js" async></script>
     @stack('scripts')
 
 </body>
