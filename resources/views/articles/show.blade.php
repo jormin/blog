@@ -30,6 +30,7 @@
                         </div>
                         {!! $article->content_html !!}
                         @include("common._socialShare")
+                        <div id="disqus_thread"></div>
                     </div>
                 </div>
             </div>
@@ -86,13 +87,16 @@
             margin-bottom: 0;
             border-bottom: 0 !important;
         }
+        #disqus_thread{
+
+        }
     </style>
 @endpush
 
 @push('scripts')
     <script>
         $(function() {
-            $("#content-editormd-view").append($(".social-share"));
+            $("#disqus_thread").prev($(".social-share"));
         });
     </script>
 @endpush

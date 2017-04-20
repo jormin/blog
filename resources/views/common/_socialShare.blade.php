@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="{{ asset("vendor/share/css/share.min.css") }}" type="text/css" />
     <style>
         .social-share{
-            border-top:1px dashed #ddd;
-            padding: 15px 0 0 15px;
+            border-bottom:1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 0;
             margin-top: 30px;
         }
     </style>

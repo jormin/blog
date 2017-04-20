@@ -172,6 +172,7 @@ return [
         Spatie\Backup\BackupServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
+        Yajra\Disqus\DisqusServiceProvider::class,
 
         /*
          * Application Service Providers...
