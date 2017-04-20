@@ -88,7 +88,7 @@
             border-bottom: 0 !important;
         }
         #disqus_thread{
-
+            padding: 15px 0;
         }
     </style>
 @endpush
