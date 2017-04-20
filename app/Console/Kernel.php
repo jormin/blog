@@ -28,8 +28,8 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
 
         // laravel-back command
-        $schedule->command('backup:clean')->daily()->at('00:30');
-        $schedule->command('backup:run --only-db')->daily()->at('01:00');
+        $schedule->command('backup:clean')->daily()->at('01:50');
+        $schedule->command('backup:run --only-db')->daily()->at('02:00');
     }
 
     /**
