@@ -173,6 +173,7 @@ return [
         Overtrue\LaravelWechat\ServiceProvider::class,
         Sentry\SentryLaravel\SentryLaravelServiceProvider::class,
         Yajra\Disqus\DisqusServiceProvider::class,
+        Jormin\Geetest\GeetestServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -235,6 +236,7 @@ return [
         'Uuid' => Webpatser\Uuid\Uuid::class,
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
         'Sentry' => Sentry\SentryLaravel\SentryFacade::class,
+        'Geetest' => Jormin\Geetest\Facades\Geetest::class,
     ],
 
 ];
