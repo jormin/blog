@@ -13,7 +13,6 @@
                                 ⋅
                                 <span>{{$article->viewnum}}阅读</span>
                                 @if (Auth::user() && Auth::user()->name === 'admin')
-                                    ⋅
                                     <span class="pull-right">
                                         {!! Form::open(['route'=>['articles.destroy',$article->uuid],'method'=>'delete']) !!}
                                             <a href=":;" onclick="event.preventDefault();$(this).closest('form').submit();" title="删除文章">
