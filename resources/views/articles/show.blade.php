@@ -12,9 +12,8 @@
                                 <span>发布于{{$article->created_at->diffForHumans()}}</span>
                                 ⋅
                                 <span>{{$article->viewnum}}阅读</span>
-                                ⋅
-                                <span class="disqus-comment-count" data-disqus-url="{{ route('articles.show',$article->uuid) }}"></span>
                                 @if (Auth::user() && Auth::user()->name === 'admin')
+                                    ⋅
                                     <span class="pull-right">
                                         {!! Form::open(['route'=>['articles.destroy',$article->uuid],'method'=>'delete']) !!}
                                             <a href=":;" onclick="event.preventDefault();$(this).closest('form').submit();" title="删除文章">
@@ -100,14 +99,5 @@
         $(function() {
             $("#disqus_thread").prev($(".social-share"));
         });
-
-        $(".disqus-comment-count").each(function(index,item){
-            $(this).bind("DOMNodeInserted", function(e) {
-                if(new RegExp('Comments').test($(this).text())){
-                    var text = $(this).text().replace("Comments","评论");
-                    $(this).text(text);
-                }
-            });
-        })
     </script>
 @endpush

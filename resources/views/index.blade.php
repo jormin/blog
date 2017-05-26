@@ -34,7 +34,6 @@
                                         <div class="events-footer">
                                             <span><i class="fa fa-clock-o"></i> {{ date('H时i分',strtotime($article->created_at)) }}</span>
                                             <span><i class="fa fa-eye"></i> {{$article->viewnum}}</span>
-                                            <span><i class="fa fa-comment disqus-comment-count" data-disqus-url="{{ route('articles.show',$article->uuid) }}"></i></span>
                                             @if (Auth::user() && Auth::user()->name === 'admin')
                                                 <span class="pull-right">
                                                     {!! Form::open(['route'=>['articles.destroy',$article->uuid],'method'=>'delete']) !!}
@@ -68,18 +67,4 @@
             margin-right: 10px;
         }
     </style>
-@endpush
-
-@push('scripts')
-    <script>
-        $(".disqus-comment-count").each(function(index,item){
-            $(this).bind("DOMNodeInserted", function(e) {
-                if(new RegExp('Comments').test($(this).text())){
-                    var num = $(this).text().replace(/[^0-9]/ig,"");
-                    $(this).text("");
-                    $(this).after(" "+num);
-                }
-            });
-        })
-    </script>
 @endpush
