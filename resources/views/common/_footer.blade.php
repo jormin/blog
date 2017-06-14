@@ -5,5 +5,5 @@
 
 @include('common._3dcloud')
 
-@include('common._wechatShare')
+{{--@include('common._wechatShare')--}}
 
