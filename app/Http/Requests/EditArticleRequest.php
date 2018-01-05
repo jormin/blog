@@ -24,7 +24,7 @@ class EditArticleRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max:50',
+            'title' => 'required|max:255',
             'content' => 'required',
             'content_html' => 'required'
         ];
@@ -39,7 +39,7 @@ class EditArticleRequest extends FormRequest
     {
         return [
             'title.required' => '请填写文章标题',
-            'title.max' => '文章标题最多为50个字符',
+            'title.max' => '文章标题最多为255个字符',
             'content.required' => '请填写文章正文',
             'content_html.required' => '请填写文章正文'
         ];
