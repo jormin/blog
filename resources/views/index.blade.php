@@ -32,7 +32,7 @@
                                             </div>
                                         </div>
                                         <div class="events-footer">
-                                            <span><i class="fa fa-clock-o"></i> {{ date('H时i分',strtotime($article->created_at)) }}</span>
+                                            <span><i class="fa fa-clock-o"></i> {{ date('Y年m月d日 H时i分',strtotime($article->created_at)) }}</span>
                                             <span><i class="fa fa-eye"></i> {{$article->viewnum}}</span>
                                             @if (Auth::user() && Auth::user()->name === 'admin')
                                                 <span class="pull-right">
