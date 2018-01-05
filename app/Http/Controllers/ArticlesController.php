@@ -36,8 +36,8 @@ class ArticlesController extends Controller
         $articles = array();
         foreach ($allarticles as $key => $article){
             $timestamp = strtotime($article->created_at);
-            $timekey = date('M Y',$timestamp);
-            $article->date = date('M d',$timestamp);
+            $timekey = date('Y年m月',$timestamp);
+            $article->date = date('m月d日',$timestamp);
             $article->index = $key;
             $articles[$timekey][] = $article;
         }
