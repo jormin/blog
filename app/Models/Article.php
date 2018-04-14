@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = [
-        'title','uuid','excerpt','content','content_html'
+        'title', 'uuid', 'column', 'excerpt','content','content_html'
     ];
 
     /**
@@ -16,6 +16,7 @@ class Article extends Model
      *
      * @param $body
      * @return string
+     * @throws \Exception
      */
     public static function makeExcerpt($body)
     {

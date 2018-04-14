@@ -20,6 +20,9 @@
                                     <div class="time">{{ $article->date }}</div>
                                     <div class="events">
                                         <div class="events-header">
+                                            @if($article->column)
+                                                <span class="article-column">{{ $article->column }}</span>
+                                            @endif
                                             <a href="{{ route('articles.show',$article->uuid) }}">
                                                 {{ $article->title }}
                                             </a>
@@ -65,6 +68,12 @@
     <style>
         .edit-article-btn{
             margin-right: 10px;
+        }
+        .article-column{
+            border: 1px solid #1890ff;
+            padding: 2px;
+            font-size: 14px;
+            background: #1890ff;
         }
     </style>
 @endpush
