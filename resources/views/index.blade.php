@@ -70,10 +70,12 @@
             margin-right: 10px;
         }
         .article-column{
-            border: 1px solid #1890ff;
+            border: 1px solid #fff;
             padding: 2px;
             font-size: 14px;
-            background: #1890ff;
+            background: #fff;
+            color: #4fc1e9;
+            border-radius: 5px;
         }
     </style>
 @endpush
